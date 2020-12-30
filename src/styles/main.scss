@@ -1,0 +1,403 @@
+// Colors
+$primaryColor: black;
+$good: green;
+$moderate: yellow;
+$unhealtySensitive: orange;
+$unhealty: red;
+$veryUnhealty: purple;
+$hazardous: brown;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(#c1d2eb, #72b7cc);
+  overflow-y: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  padding: 0px;
+}
+
+nav {
+  margin-top: 25px;
+}
+
+.navbar-brand {
+  font-size: 30px;
+
+  img {
+    height: 25px;
+  }
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
+}
+
+.btn-outline-success:focus {
+  box-shadow: none;
+}
+
+form {
+  .btn-outline-success {
+    color: $primaryColor;
+    border: $primaryColor 1px solid;
+
+    &:hover {
+      background-color: darken($color: $primaryColor, $amount: 1);
+      border: $primaryColor 1px solid;
+    }
+  }
+
+  .btn-outline-success:not(:disabled):not(.disabled):active {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+  }
+
+  .form-control {
+    &:focus {
+      border-color: $primaryColor;
+      box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+// Body
+.locationNotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.puff {
+  display: none;
+}
+
+.dataInfo {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dataDisplay {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .dataDisplayAqi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .good {
+      background-color: $good;
+      border: none;
+      cursor: inherit;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .moderate {
+      background-color: $moderate;
+      border: none;
+      cursor: inherit;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .unhealtySensitive {
+      background-color: $unhealtySensitive;
+      border: none;
+      cursor: inherit;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .unhealty {
+      background-color: red;
+      border: none;
+      cursor: inherit;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .veryUnhealty {
+      background-color: $veryUnhealty;
+      border: none;
+      cursor: inherit;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .hazardous {
+      background-color: $hazardous;
+      border: none;
+      cursor: inherit;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .dataDisplayInfos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dataCont {
+    margin-right: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    img {
+      width: 20px;
+    }
+  }
+
+  .dataCont,
+  .dataDisplayAqi {
+    border-radius: 0.25rem;
+    background-color: rgb(246, 247, 247);
+    // -webkit-box-shadow: -1px 5px 15px 4px rgba(0, 0, 0, 0.22);
+    // box-shadow: -1px 5px 15px 4px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.dataFont {
+  margin-top: 7%;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 40px;
+  }
+}
+
+// tooltip
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li,
+.dataDisplayAqi,
+.dataCont {
+  position: relative;
+  //list-style: none;
+  //width: 20px;
+  //height: 20px;
+  //background: red;
+  //margin: 0 20px;
+  //border-radius: .25rem;
+  transition: 0.5s;
+  cursor: pointer;
+
+  //&:hover {
+  //  background: #2c3e50;
+  //}
+
+  .content {
+    position: absolute;
+    bottom: 160px;
+    left: 50px;
+    width: 350px;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 0.8rem;
+    text-align: left;
+    z-index: 999;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      bottom: -5px;
+      left: 150px;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover .content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+
+.dataDisplayInfos {
+  .dataCont--secLine {
+    .content {
+      bottom: 130px;
+
+    }
+  }
+}
+
+
+// media query
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow: scroll;
+  }
+
+  .dataDisplay {
+    grid-template-columns: 1fr;
+
+    &:last-of-type {
+      margin-top: 0px;
+    }
+
+    .dataDisplayInfos {
+      margin-top: 5%;
+    }
+  }
+
+  .dataDisplayAqi,
+  .dataCont {
+    .content {
+      left: 150px;
+      //background-color: red;
+
+      &--right {
+        left: 50px;
+        z-index: 999;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .navbarContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .form-control {
+    width: 70%;
+    margin-right: 10px;
+  }
+
+  .form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dataInfo {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .dataFont {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .dataDisplayInfos {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 414px) {
+
+  #puffContainer,
+  .dataDisplay {
+    //overflow: hidden;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .dataDisplay {
+    font-size: 18px;
+    margin-top: 0px;
+
+    .dataDisplayAqi {
+      width: 100%;
+      padding: 15px;
+      box-shadow: none;
+    }
+  }
+
+  .dataDisplayAqi,
+  .dataCont {
+    box-shadow: none;
+
+    .content {
+      left: 150px;
+      width: 280px;
+
+      //background-color: red;
+      &:before {
+        left: 50px;
+      }
+
+      &--right {
+        left: -50px;
+
+        &:before {
+          left: 200px !important;
+        }
+      }
+    }
+  }
+}

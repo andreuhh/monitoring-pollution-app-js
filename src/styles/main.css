@@ -1,0 +1,216 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bdc3c7), to(#2c3e50));
+  background-image: linear-gradient(#bdc3c7, #518b8f);
+
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0px;
+}
+
+nav {
+  margin-top: 25px;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-outline-success:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+form .btn-outline-success {
+  color: #2c3e50;
+  border: #2c3e50 1px solid;
+}
+
+form .btn-outline-success:hover {
+  background-color: #2a3b4d;
+  border: #2c3e50 1px solid;
+}
+
+form .btn-outline-success:not(:disabled):not(.disabled):active {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+}
+
+form .form-control:focus {
+  border-color: #2c3e50;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
+}
+
+.locationNotFound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60vh;
+}
+
+.puff {
+  display: none;
+}
+
+.dataInfo {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.dataDisplay {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dataDisplay .dataDisplayAqi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.dataDisplay .dataDisplayAqi div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dataDisplay .dataDisplayAqi .good {
+  background-color: green;
+  border: none;
+  cursor: inherit;
+}
+
+.dataDisplay .dataDisplayAqi .good:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dataDisplay .dataDisplayAqi .moderate {
+  background-color: yellow;
+  border: none;
+  cursor: inherit;
+}
+
+.dataDisplay .dataDisplayAqi .moderate:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dataDisplay .dataDisplayAqi .unhealtySensitive {
+  background-color: orange;
+  border: none;
+  cursor: inherit;
+}
+
+.dataDisplay .dataDisplayAqi .unhealtySensitive:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dataDisplay .dataDisplayAqi .unhealty {
+  background-color: red;
+  border: none;
+  cursor: inherit;
+}
+
+.dataDisplay .dataDisplayAqi .unhealty:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dataDisplay .dataDisplayAqi .veryUnhealty {
+  background-color: purple;
+  border: none;
+  cursor: inherit;
+}
+
+.dataDisplay .dataDisplayAqi .veryUnhealty:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dataDisplay .dataDisplayAqi .hazardous {
+  background-color: brown;
+  border: none;
+  cursor: inherit;
+}
+
+.dataDisplay .dataDisplayAqi .hazardous:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dataDisplay .dataDisplayInfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */
