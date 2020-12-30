@@ -1,6 +1,5 @@
 import { html } from 'lit-html';
 import { search } from './search';
-import smogIcon from '../img/smog.svg';
 
 // Component STATELESS
 const header = (title = 'AirPollutionApp') => html`
