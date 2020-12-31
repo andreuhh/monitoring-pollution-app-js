@@ -6,9 +6,9 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#bdc3c7), to(#2c3e50));
+  /*background-image: -webkit-gradient(linear, left top, left bottom, from(#bdc3c7), to(#2c3e50));*/
   /*background-image: linear-gradient(#bdc3c7, #518b8f);*/
-  background-image: linear-gradient(#bdc3c7, red);
+  background-image: linear-gradient(orange, red);
 
   height: 100vh;
   overflow: hidden;
